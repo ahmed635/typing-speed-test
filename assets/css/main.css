@@ -1,0 +1,233 @@
+/* Start Variables */
+:root {
+    --main-color: #0075ff;
+    --second-color: white;
+    --padding-value: 15px;
+}
+/* End Variables */
+/* Start Global Rules */
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    /* background-color: #eee; */
+}
+/* End Global Rules */
+/* Start Header */
+header {
+    background-color: var(--main-color);
+    text-align: center;
+    padding: 10px;
+}
+header h2,
+header p {
+    color: var(--second-color);
+}
+/* End Header */
+/* Start Main Section */
+main {
+    display: flex;
+    justify-content: space-between;
+}
+main aside {
+    width: 30%;
+    background-color: #eee;
+    padding: calc(var(--padding-value)-5pc);
+    
+}
+main aside .instructions {
+    margin-bottom: var(--margin-value);
+}
+main aside .instructions p {
+    color: var(--main-color);
+    font-weight: bold;
+    font-size: 18px;
+    padding-left: var(--padding-value);
+}
+main aside .instructions ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+main aside .instructions ul li {
+    color: #777;
+    padding-bottom: var(--padding-value);
+    padding-left: calc(var(--padding-value) + 10px);
+    text-transform: capitalize;
+}
+main aside .levels span {
+    color: var(--main-color);
+    font-weight: bold;
+    padding: var(--padding-value);
+}
+main aside .levels select {
+    margin-left: 10px;
+}
+main aside .history {
+    padding: var(--padding-value);
+}
+main aside .history::before {
+    content: "History";
+    color: var(--main-color);
+    font-weight: bold;
+    font-size: 18px;
+}
+main aside .history p {
+    color: var(--second-color);
+    background-color: var(--main-color);
+    width: 50%;
+    font-size: 20px;
+    text-align: center;
+    padding: calc(var(--padding-value) - 5px);
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 20px auto;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+main aside .history ul {
+    list-style: none;
+    padding: calc(var(--padding-value) - 5px);
+    margin: 10px;
+    background-color: var(--second-color);
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+main aside .history ul li  {
+    color: #777;
+    padding-bottom: var(--padding-value);
+    padding-left: calc(var(--padding-value) + 10px);
+    text-transform: capitalize;
+}
+
+main section {
+    flex: 1;
+    background-color: var(--second-color);
+}
+.container {
+    text-align: center;
+    min-height: 372px;
+}
+main section .container .message {
+    padding: var(--padding-value);
+    background-color: var(--second-color);
+    text-align: center;
+}
+main section .container .message .lvl,
+main section .container .message .seconds {
+    color: var(--main-color);
+}
+main section .container .message .lvl::before,
+main section .container .message .seconds::before {
+    content: '[ ';
+    font-weight: bold;
+}
+main section .container .message .lvl::after,
+main section .container .message .seconds::after {
+    content: ' ]';
+    font-weight: bold;
+}
+main section .container .start {
+    margin: 0 auto;
+    
+}
+main section .container .start button {
+    width: 50%;
+    color: var(--second-color);
+    background-color: var(--main-color);
+    padding: var(--padding-value);
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 6px;
+}
+main section .container .the-word {
+    color: var(--main-color);
+    padding: var(--padding-value);
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+    user-select: none;
+}
+main section .container .input {
+    width: 50%;
+    background-color: var(--second-color);
+    color: var(--main-color);
+    padding: var(--padding-value);
+    font-size: 25px;
+    margin-bottom: var(--margin-value);
+    border: 2px solid var(--main-color);
+    border-radius: 6px;
+    text-align: center;
+    font-weight: bold;
+    user-select: none;
+    caret-color: var(--main-color);
+
+}
+main section .container .input:focus {
+    outline: none;
+}
+main section .container .upcoming-words {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: var(--second-color);
+    padding: var(--padding-value);
+}
+main section .container .upcoming-words div {
+    color: var(--second-color);
+    background-color: var(--main-color);
+    padding: calc(var(--padding-value) - 5px);
+    margin: 10px;
+    line-height: 16px;
+    text-align: center;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+}
+main section .container .control {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--second-color);
+    padding: var(--padding-value);
+}
+main section .container .control .time span {
+    color: var(--main-color);
+    font-weight: bold;
+}
+main section .container .control .score span {
+    color: var(--main-color);
+    font-weight: bold;
+}
+main section .container .finish {
+    padding: var(--padding-value);
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+main section .container .finish.failure {
+    color: red;
+}
+main section .container .finish.good {
+    color: green;
+}
+/* End Main Section */
+/* start footer */
+footer {
+    background-color: var(--main-color);
+    color: var(--second-color);
+    text-align: center;
+    padding: var(--padding-value);
+    font-weight: bold;
+    
+}
+/* end footer */
